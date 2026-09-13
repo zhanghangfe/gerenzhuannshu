@@ -5,21 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 BG 01 - xiaohe
-  type: vmess
-  server: 62.171.228.179
+  type: vless
+  server: 108.165.233.223
   port: 443
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
+  uuid: 2388e166-3890-33ae-f77e-efac00000003
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: renderer-stream-2-62.mirra.now
+  servername: netlivpn4813.ddhshhshs.workers.dev
   network: ws
   ws-opts:
-    path: /api/v1/gpu-stream/socket
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
     headers:
-      Host: renderer-stream-2-62.mirra.now
+      Host: netlivpn4813.ddhshhshs.workers.dev
 - name: 🇧🇬 BG 02 - xiaohe
   type: vless
   server: 192.145.31.5
@@ -47,24 +45,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: neth9.lunariai.ru
-- name: 🇧🇬 BG 05 - xiaohe
-  type: vless
-  server: 192.145.31.5
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: neth9.lunariai.ru
-- name: 🇧🇬 BG 06 - xiaohe
-  type: vless
-  server: neth9.lunariai.ru
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: neth9.lunariai.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,8 +54,6 @@ proxy-groups:
   - 🇧🇬 BG 02 - xiaohe
   - 🇧🇬 BG 03 - xiaohe
   - 🇧🇬 BG 04 - xiaohe
-  - 🇧🇬 BG 05 - xiaohe
-  - 🇧🇬 BG 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -85,7 +63,5 @@ proxy-groups:
   - 🇧🇬 BG 02 - xiaohe
   - 🇧🇬 BG 03 - xiaohe
   - 🇧🇬 BG 04 - xiaohe
-  - 🇧🇬 BG 05 - xiaohe
-  - 🇧🇬 BG 06 - xiaohe
 rules:
 - MATCH,PROXIES
