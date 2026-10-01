@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: 🇦🇹 AT 01 - xiaohe
   type: vless
+  server: 185.112.249.201
+  port: 2053
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: edgetunnel-4uw.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- name: 🇦🇹 AT 02 - xiaohe
+  type: vless
   server: 173.242.63.235
   port: 8443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
@@ -18,7 +32,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: edgetunnel-4uw.pages.dev
-- name: 🇦🇹 AT 02 - xiaohe
+- name: 🇦🇹 AT 03 - xiaohe
   type: ss
   server: 82.110.60.9
   port: 19999
@@ -32,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
+  - 🇦🇹 AT 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -39,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
+  - 🇦🇹 AT 03 - xiaohe
 rules:
 - MATCH,PROXIES
