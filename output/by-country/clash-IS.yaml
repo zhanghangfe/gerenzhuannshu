@@ -1,0 +1,27 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇸 IS 01 - xiaohe
+  type: ss
+  server: b2a2.velqixa.ir
+  port: 39221
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
+  udp: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇸 IS 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇸 IS 01 - xiaohe
+rules:
+- MATCH,PROXIES
